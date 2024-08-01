@@ -3,10 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title> Mocha / chai Testing</title>
+    <!-- link to mocha's css for styling test results-->
 </head>
 <body>
+    <!--making a div where Mocha will output test results-->
+    <div id="mocha">
+        <!--a basic navigation link-->
+        <p><a href=".">Index</a></p>
+        </div>
+        <!--another divs for additional messages-->
+        <div id="messages"></div>
+        <div id="fixtures"></div>
+        <!--script tag to include mocha-->
+        <script src="./node_modules/mocha/mocha.js"></script>
+
+        <!--script tag to include chai-->
+        <script src="./node_modules/chai/chai.js"></script>
+
+        <!--include javascript file containing your applicationn logic-->
     <script src="./week9.js"></script>
+    <script>
+        mocha.setup("bdd")
+    </script>
+
+    <!--include the javascript file containg mocha/chai testingh-->
+    <script src="./test.js"></script>
+
     <h1>War Card Game</h1>
+    
+    //execute the tests.
+  <script>  mocha.run();
+</script>
 </body>
 </html>
